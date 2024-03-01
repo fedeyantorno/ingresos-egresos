@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,400" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+    <title>Gasto Semanal</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 class="text-center bold">Segumiento egresos mensuales</h1>
+        </header>
+        <section class="contenido-principal">
+            <div class="row">
+                <div class="col">
+                    <div class="contenido primario">
+                        <h2 class="text-center bold">Añade tus ingresos aqui</h2>
+                        <form id="agregar-ingresos" action="#">
+
+                            <div class="form-group">
+                                <label for="ingreso">Ingreso:</label>
+                                <input type="text" class="form-control" id="ingreso" placeholder="Nombre Ingreso">
+                            </div>
+                            <div class="contenedor">
+                                <div class="form-group">
+                                    <label for="cantidad-ingreso">Cantidad:</label>
+                                    <input type="text" class="form-control" id="cantidad-ingreso"
+                                        placeholder="Cantidad en $">
+                                </div>
+                                <div class="form-group">
+                                    <label for="fecha-ingreso">Fecha:</label>
+                                    <input type="date" class="form-control" id="fecha-ingreso">
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary full-width">Agregar</button>
+                        </form>
+
+                    </div> <!--contenido-->
+                </div> <!--col-->
+
+                <div class="col ">
+                    <div class="contenido primario">
+                        <h2 class="text-center bold">Añade tus egresos aqui</h2>
+                        <form id="agregar-egresos" action="#">
+                            <div class="form-group">
+                                <label for="egreso">Egreso:</label>
+                                <input type="text" class="form-control" id="egreso" placeholder="Nombre Egreso">
+                            </div>
+                            <div class="contenedor">
+                                <div class="form-group">
+                                    <label for="cantidad-egreso">Cantidad:</label>
+                                    <input type="text" class="form-control" id="cantidad-egreso"
+                                        placeholder="Cantidad en $">
+                                </div>
+                                <div class="form-group">
+                                    <label for="fecha-egreso">Fecha:</label>
+                                    <input type="date" class="form-control" id="fecha-egreso">
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary full-width">Agregar</button>
+                        </form>
+
+                    </div> <!--contenido-->
+                </div> <!--col-->
+            </div> <!--row-->
+        </section>
+
+        <section class="contenido-principal">
+            <div class="row">
+
+                <div class="col col-lg-6">
+                    <h2 class="text-center bold">Ingresos</h2>
+
+                    <div id="gastos">
+                        <ul class="list-group"></ul>
+                    </div>
+                    <div id="presupuesto" class="presupuesto">
+                        <div class="alert alert-primary">
+                            <p>Ingresos <span id="ingresos-parcial"></span> </p>
+                        </div>
+                        <div class="restante alert alert-success">
+                            <p>Total<span id="restante"></span></p>
+                        </div>
+                    </div> <!--presupuesto-->
+                </div><!--col-->
+
+                <div class="col col-lg-6">
+                    <h2 class="text-center bold">Egresos</h2>
+
+                    <div id="gastos">
+                        <ul class="list-group"></ul>
+                    </div>
+                    <div id="presupuesto" class="presupuesto">
+                        <div class="alert alert-primary">
+                            <p>Egresos <span id="egresos-parcial"></span> </p>
+                        </div>
+                        <div class="restante alert alert-success">
+                            <p>Restante<span id="restante"></span></p>
+                        </div>
+                    </div> <!--presupuesto-->
+                </div><!--col-->
+            </div> <!--row-->
+        </section>
+    </div>
+
+    <script src="js/app-ingresos-egresos.js"></script>
+</body>
+
+</html>
